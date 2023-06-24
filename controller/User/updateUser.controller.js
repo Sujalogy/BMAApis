@@ -1,7 +1,7 @@
 const { UserModel } = require('../../model/users.model');
 
 const updateUser = async (req, res) => {
-  const { userId } = req.body; // Assuming you're sending the userId in the request body
+  const userId = req.params.id; 
   const updateFields = {
     image: req.body.image,
     fullName: req.body.fullName,
